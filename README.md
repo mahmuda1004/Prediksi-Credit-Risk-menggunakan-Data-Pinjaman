@@ -11,6 +11,9 @@ Proyek ini berfokus pada analisis data dan pembangunan model machine learning un
 
 ---
 
+## Deskripsi Proyek
+Proyek ini bertujuan untuk memprediksi risiko kredit menggunakan model Machine Learning.
+
 ## 📁 Isi Repository
 
 - **MAHMUDA_VIX_IDX Partners.ipynb**  
@@ -135,3 +138,6 @@ python "MAHMUDA_VIX_IDX Partners.py"
 ## ✍️ Penulis
 ### Mahmuda
 Proyek Data Science — Prediksi Credit Risk
+
+## Status
+Proyek telah **selesai** dan siap digunakan.
