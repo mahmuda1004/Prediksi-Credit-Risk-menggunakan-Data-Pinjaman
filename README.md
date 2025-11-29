@@ -141,3 +141,7 @@ Proyek Data Science — Prediksi Credit Risk
 
 ## Status
 Proyek telah **selesai** dan siap digunakan.
+
+📄 **Lihat Laporan PDF:**  
+[Klik untuk membuka MAHMUDA_VIX_IDX Partners.pdf](./MAHMUDA_VIX_IDX%20Partners.pdf)
+
