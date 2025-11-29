@@ -1,3 +1,9 @@
+<img src="https://img.shields.io/badge/Project-Credit%20Risk%20Prediction-blue?style=for-the-badge" alt="Project Badge">
+<img src="https://img.shields.io/badge/Python-3.x-yellow?style=for-the-badge" alt="Python Badge">
+<img src="https://img.shields.io/badge/Machine%20Learning-Random%20Forest-green?style=for-the-badge" alt="ML Badge">
+<img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status Badge">
+
+
 # 📊 Prediksi Credit Risk (2007–2014)
 
 Proyek ini berfokus pada analisis data dan pembangunan model machine learning untuk memprediksi **risiko kredit** berdasarkan dataset pinjaman dari tahun **2007 hingga 2014**. Tujuan utama proyek adalah mengklasifikasikan peminjam ke dalam kategori **Aman (1)** atau **Risiko (0)** serta memahami pola yang memengaruhi status pinjaman.
