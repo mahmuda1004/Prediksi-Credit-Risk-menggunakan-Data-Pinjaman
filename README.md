@@ -1,148 +1,130 @@
-Prediksi Credit Risk Menggunakan Data Pinjaman (2007–2014)
+# 📊 Prediksi Credit Risk (2007–2014)
 
-Repository ini berisi project analisis data dan machine learning untuk memprediksi risiko kredit (credit risk) berdasarkan dataset pinjaman dari tahun 2007 hingga 2014.
-Proyek ini dilakukan sebagai bagian dari pembelajaran data science dan machine learning, dengan fokus pada pengolahan data, eksplorasi, dan pembuatan model prediksi.
+Proyek ini berfokus pada analisis data dan pembangunan model machine learning untuk memprediksi **risiko kredit** berdasarkan dataset pinjaman dari tahun **2007 hingga 2014**. Tujuan utama proyek adalah mengklasifikasikan peminjam ke dalam kategori **Aman (1)** atau **Risiko (0)** serta memahami pola yang memengaruhi status pinjaman.
 
-📁 Isi Repository
-File	Deskripsi
-MAHMUDA_VIX_IDX Partners.ipynb	Notebook utama berisi proses analisis data, pembersihan data, visualisasi, pemodelan, serta evaluasi.
-MAHMUDA_VIX_IDX Partners.py	Versi script Python dari proses modeling, cocok untuk dijalankan tanpa notebook.
-MAHMUDA_VIX_IDX Partners.pdf	Laporan ringkas hasil analisis dan model prediksi.
-📌 Tujuan Proyek
+---
 
-Proyek ini bertujuan untuk:
+## 📁 Isi Repository
 
-Mengelompokkan status pinjaman menjadi dua kategori: Aman (1) dan Risiko (0).
+- **MAHMUDA_VIX_IDX Partners.ipynb**  
+  Notebook utama berisi analisis, pembersihan data, visualisasi, pemodelan, dan evaluasi.
 
-Membangun model machine learning untuk memprediksi apakah seorang peminjam berisiko gagal bayar.
+- **MAHMUDA_VIX_IDX Partners.py**  
+  Script versi Python dari proses modeling untuk dijalankan di luar notebook.
 
-Melakukan visualisasi untuk memahami pola dan karakteristik peminjam.
+- **MAHMUDA_VIX_IDX Partners.pdf**  
+  Laporan ringkas hasil analisis dan performa model.
 
-📊 Dataset
+---
 
-Dataset yang digunakan adalah:
+## 🎯 Tujuan Proyek
 
-loan_data_2007_2014.csv
+- Mengelompokkan status pinjaman menjadi:
+  - **1 — Aman**
+  - **0 — Risiko**
+- Membangun model machine learning untuk memprediksi potensi gagal bayar.
+- Melakukan eksplorasi data dan visualisasi untuk memahami karakteristik peminjam.
 
-Jumlah baris: 466.285 data
+---
 
-Jumlah kolom: 75 fitur
+## 📊 Dataset
 
-Beberapa fitur penting:
+- **Nama Dataset:** `loan_data_2007_2014.csv`  
+- **Jumlah Data:** 466.285 baris  
+- **Jumlah Fitur:** 75 kolom  
 
-loan_amnt, int_rate, dti, annual_inc,
+**Fitur penting yang digunakan:**
+`loan_amnt`, `int_rate`, `dti`, `annual_inc`,  
+`grade`, `sub_grade`, `home_ownership`, `purpose`, dll.
 
-grade, sub_grade, home_ownership, purpose,
+---
 
-dan sebagainya.
+## 🛠️ Tahapan Analisis
 
-🧹 Tahapan Proses Analisis
-1. Import Library
+### 1. Import Library
 
-Menggunakan berbagai pustaka seperti:
+Menggunakan library:
+- pandas, numpy
+- matplotlib, seaborn
+- scikit-learn
+- SMOTE
+- GridSearchCV
 
-pandas, numpy
+### 2. Pembersihan & Pemrosesan Data
 
-matplotlib, seaborn
+Proses utama:
+- Menangani missing values dengan *SimpleImputer*
+- Menghapus kolom yang tidak relevan
+- Encoding kolom kategorikal
+- Menyeimbangkan data menggunakan **SMOTE**
+- Normalisasi fitur menggunakan **StandardScaler**
 
-scikit-learn
+### 3. Kategorisasi Target (`loan_status`)
 
-SMOTE (imbalance handling)
+**Kategori Risiko (0):**
+- Charged Off  
+- Default  
+- Late 31–120 days  
+- Late 16–30 days  
+- In Grace Period  
+- Does not meet the credit policy: Charged Off  
 
-GridSearchCV
+**Kategori Aman (1):**
+- Fully Paid  
+- Current  
+- Status aman lainnya  
 
-2. Pembersihan & Pemrosesan Data
+### 4. Eksplorasi Data (EDA)
 
-Langkah-langkah penting:
+Visualisasi yang dilakukan:
+- Distribusi loan status
+- Proporsi aman vs risiko
+- Boxplot `loan_amnt` berdasarkan status
+- Scatterplot `loan_amnt` vs `int_rate`
+- Histogram `annual_inc`
+- Boxplot `dti` berdasarkan status
 
-Menangani missing values dengan SimpleImputer
+---
 
-Menghapus kolom yang tidak relevan
+## 🤖 Model Machine Learning
 
-Mengonversi kolom kategorikal
+**Model utama:** Random Forest Classifier
 
-Mengatasi ketidakseimbangan data menggunakan SMOTE
+Penerapan mencakup:
+- Train-test split  
+- SMOTE untuk mengatasi imbalance data  
+- Hyperparameter tuning menggunakan GridSearchCV  
 
-Normalisasi menggunakan StandardScaler
-
-3. Kategorisasi Target (loan_status)
-
-Status pinjaman dikelompokkan menjadi:
-
-🔴 Resiko (0)
-Charged Off, Default, Late 31-120 days, In Grace Period, Late 16-30 days,
-Does not meet the credit policy. Status: Charged Off
-
-🟢 Aman (1)
-Status lain seperti Fully Paid, Current, dll.
-
-📈 Eksplorasi Data (EDA)
-
-Notebook menampilkan beberapa visualisasi, seperti:
-
-Countplot distribusi loan status
-
-Pie chart proporsi aman vs risiko
-
-Boxplot loan_amnt vs loan_status
-
-Scatterplot loan_amnt vs int_rate
-
-Histogram annual_inc
-
-Boxplot dti berdasarkan status
-
-Visualisasi membantu memahami hubungan antara fitur dan status pinjaman.
-
-🤖 Model Machine Learning
-
-Model yang digunakan:
-
-Random Forest Classifier
-
-Menggunakan train-test split
-
-Oversampling memakai SMOTE
-
-Hyperparameter tuning dengan GridSearchCV
-
-Evaluasi model menggunakan:
-
-Accuracy
-
-Precision
-
-Recall
-
-F1-score
-
-ROC-AUC
-
-📌 Hasil Utama
-
-Model Random Forest menunjukkan performa yang baik dalam mendeteksi data kredit berisiko.
-Detail skor evaluasi dapat dilihat pada file .ipynb dan laporan .pdf.
-
-🚀 Cara Menjalankan
-1. Jalankan Notebook
-jupyter notebook MAHMUDA_VIX_IDX Partners.ipynb
-
-2. Jalankan Script Python
-python MAHMUDA_VIX_IDX Partners.py
-
-📚 Teknologi yang Digunakan
-
-Python 3.x
-
-Google Colab / Jupyter Notebook
-
-scikit-learn
-
-pandas, numpy
-
-seaborn, matplotlib
-
-✍️ Penulis
-
-Mahmuda
+**Metrik yang digunakan:**
+- Accuracy  
+- Precision  
+- Recall  
+- F1-Score  
+- ROC-AUC  
+
+Detail lengkap performa model tersedia pada file `.ipynb` dan `.pdf`.
+
+---
+
+## 🚀 Cara Menjalankan
+
+### Menjalankan Notebook
+```bash
+jupyter notebook "MAHMUDA_VIX_IDX Partners.ipynb"
+```
+## 🔹 Menjalankan Script Python
+
+### Menjalankan Notebook
+```bash
+python "MAHMUDA_VIX_IDX Partners.py"
+```
+## Teknologi yang Digunakan
+- Python 3.x
+- Jupyter Notebook / Google Colab
+- scikit-learn
+- pandas, numpy
+- seaborn, matplotlib
+
+## ✍️ Penulis
+### Mahmuda
 Proyek Data Science — Prediksi Credit Risk
