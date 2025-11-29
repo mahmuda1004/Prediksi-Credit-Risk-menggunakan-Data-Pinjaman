@@ -3,7 +3,7 @@
 [![ML Badge](https://img.shields.io/badge/Machine%20Learning-Random%20Forest-green?style=for-the-badge)](#model-machine-learning)
 [![Status Badge](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](#status)
 
-![Preview](kredit.png)
+![Preview](Credit-Risk.png)
 
 # 📊 Prediksi Credit Risk (2007–2014)
 
