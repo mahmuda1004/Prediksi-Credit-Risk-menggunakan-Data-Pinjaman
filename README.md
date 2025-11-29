@@ -93,7 +93,7 @@ Visualisasi yang dilakukan:
 
 ---
 
-## 🤖 Model Machine Learning
+## Model Machine Learning
 
 **Model utama:** Random Forest Classifier
 
