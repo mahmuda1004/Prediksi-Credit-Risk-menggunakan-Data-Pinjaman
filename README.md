@@ -1,7 +1,8 @@
-<img src="https://img.shields.io/badge/Project-Credit%20Risk%20Prediction-blue?style=for-the-badge" alt="Project Badge">
-<img src="https://img.shields.io/badge/Python-3.x-yellow?style=for-the-badge" alt="Python Badge">
-<img src="https://img.shields.io/badge/Machine%20Learning-Random%20Forest-green?style=for-the-badge" alt="ML Badge">
-<img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status Badge">
+[![Project Badge](https://img.shields.io/badge/Project-Credit%20Risk%20Prediction-blue?style=for-the-badge)](#deskripsi-proyek)
+[![Python Badge](https://img.shields.io/badge/Python-3.x-yellow?style=for-the-badge)](#teknologi-yang-digunakan)
+[![ML Badge](https://img.shields.io/badge/Machine%20Learning-Random%20Forest-green?style=for-the-badge)](#model-machine-learning)
+[![Status Badge](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](#status)
+
 
 
 # 📊 Prediksi Credit Risk (2007–2014)
